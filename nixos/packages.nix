@@ -2,10 +2,16 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		git
 		vim
 		firefox
 		alacritty
 		steam
+
+
+		#DEVELOPMENT
+		git
+		helix #IDE
+		python3
+		pkgs.python312Packages.python-lsp-server
 	];
 }
