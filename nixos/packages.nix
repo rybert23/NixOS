@@ -13,6 +13,6 @@
 		helix #IDE
 		python3
 		pkgs.python312Packages.python-lsp-server
-		pkgs.swayfx
+		pkgs.dwm
 	];
 }

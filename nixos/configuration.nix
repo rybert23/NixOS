@@ -64,6 +64,17 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Enable the dwm Window Manager
+  services.xserver.windowManager.dwm.enable = true;
+
+  nixpkgs.overlays = [
+  (final: prev: {
+    dwm = prev.dwm.override {
+      conf = builtins.readFile ./dwm/config.h;
+    };
+  })
+];
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
