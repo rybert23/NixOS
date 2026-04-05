@@ -13,6 +13,9 @@
 		helix #IDE
 		python3
 		pkgs.python312Packages.python-lsp-server
+
+		#Tiling Window Manager
 		pkgs.dwm
+		dmenu
 	];
 }
